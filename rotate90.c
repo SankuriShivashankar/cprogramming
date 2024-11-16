@@ -2,40 +2,38 @@
 int main()
 {
     int n;
-    printf("enter no of rows and columns:");
+    printf("enter no of rows:");
     scanf("%d",&n);
     int arr[n][n];
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<n;j++)
         {
-            printf("enter the elements of array [%d][%d]",i+1,j+1);
+            printf("enter the elements [%d][%d]",i+1,j+1);
             scanf("%d",&arr[i][j]);
         }
     }
-    //transpose of array
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<=i;j++)
         {
-            int temp = arr[i][j];
-            arr[i][j] = arr[j][i];
-            arr[j][i] = temp;
+        int temp = arr[i][j];
+        arr[i][j] = arr[j][i];
+        arr[j][i] = temp;
         }
-        printf("\n");
     }
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<n;j++)
         {
-            printf("%d ",arr[i][j]);
+            printf("%d",arr[i][j]);
         }
         printf("\n");
     }
-    // rotating the array
+    printf("\n");
     for(int i=0;i<n;i++)
     {
-        int j=0;
+        int j = 0;
         int k = n-1;
         while(j<k)
         {
@@ -45,15 +43,16 @@ int main()
             j++;
             k--;
         }
-        printf("\n");
     }
+    printf("\n");
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<n;j++)
         {
-            printf("%d ",arr[i][j]);
+            printf("%d",arr[i][j]);
         }
         printf("\n");
     }
     return 0;
+
 }
